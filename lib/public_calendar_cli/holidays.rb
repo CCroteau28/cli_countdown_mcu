@@ -20,7 +20,7 @@ class Holidays
     def self.find_by_selection(holiday_name)
         (holiday_name)
         self.all.detect do |holiday|
-            holiday.name == holiday_name
+            holiday.name.downcase == holiday_name.downcase
         end
     end
 end

@@ -4,7 +4,7 @@ class API
         holidays_array = JSON.parse(response)
         holidays_array.each do |holiday|
             Holidays.new(holiday)
-            # binding.pry
+            #  binding.pry
         end
         # binding.pry
     end

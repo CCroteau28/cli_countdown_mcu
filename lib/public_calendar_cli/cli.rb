@@ -18,9 +18,9 @@ class CLI
 
     def menu
         selection = user_input
-        if selection == "yes"
+        if selection.downcase == "yes"
             print_holidays
-        elsif selection == "exit"
+        elsif selection.downcase == "exit"
             goodbye
         else
             invalid
@@ -32,7 +32,7 @@ class CLI
     end
 
     def invalid
-        puts "I didnt't quite get what you mean.. May you try again?"
+        puts "I didnt't quite get what you mean.. Enter yes to see the list again or exit to exit?"
         menu
     end
 
@@ -68,7 +68,8 @@ class CLI
         puts "*****************************"
         puts ""
         puts ""
-        puts "enter y to see more holidays or exit to exit."
+        puts "enter yes to see more holidays or exit to exit."
+        menu
         else
             invalid
         end
